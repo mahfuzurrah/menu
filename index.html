@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Bar | Disendor Pro</title>
+    <link rel="shortcut icon" href="./icons/logo.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+
+  <body>
+    <div id="main">
+      <div class="main-navbar">
+        <div id="icon-container">
+          <div class="menu_icons" id="popupButton">
+            <span><img src="assets/icons/Wiyselogo.svg" alt="" /></span>
+          </div>
+
+          <div class="menu_icons Menu" id="popupButton2">
+            <span><img src="assets/icons/menu.svg" alt="" /></span>
+          </div>
+
+          <div class="menu_icons Volume">
+            <span><img src="assets/icons/volume_up.svg" alt="" /></span>
+          </div>
+
+          <div class="menu_icons Tasks hide">
+            <span><img src="assets/icons/task.svg" alt="" /></span>
+          </div>
+
+          <div class="menu_icons Notification hide">
+            <span
+              ><img src="assets/icons/notifications_active.svg" alt=""
+            /></span>
+          </div>
+
+          <div class="menu_icons Setting hide">
+            <span><img src="assets/icons/settings.svg" alt="" /></span>
+          </div>
+        </div>
+        <div class="icons" id="extend" onclick="extend()">
+          <span id="ex-icon"
+            ><img src="assets/icons/arrow_forward_ios.svg" alt=""
+          /></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Voice popup -->
+    <div class="voice popup" id="popup">
+      <div class="menu_icons">
+        <span><img src="assets/icons/keyboard_voice.svg" alt="" /></span>
+      </div>
+      <div class="text_input">
+        <input type="text" placeholder="Enter your question or task" />
+      </div>
+      <div class="menu_icons">
+        <span><img src="assets/icons/rotate_left.svg" alt="" /></span>
+      </div>
+
+      <!-- Menu popup-->
+      <div class="menu popup" id="popup2">
+        <p>1.What are kye capabilities of Sales module</p>
+        <p>2.Show how invoice is created</p>
+      </div>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

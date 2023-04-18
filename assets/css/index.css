@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+  font-family: "Poppins", sans-serif;
+}
+
+#main {
+  position: relative;
+  height: 100vh;
+}
+
+.main-navbar {
+  padding: 12px 5px;
+  border-radius: 8px;
+  margin: 10px;
+  background-color: #0e1a56;
+  border: 1.5px solid #233fce;
+  display: flex;
+  width: fit-content;
+  color: #ebf5ff;
+  position: absolute;
+  top: 90%;
+  left: 1%;
+  transform: translate(-1%, -90%)
+}
+
+#icon-container {
+  transition: all ease-in-out 0.5s;
+  display: flex;
+  overflow: hidden;
+  width: 150px;
+}
+
+.icons,
+.menu_icons {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  /* position: relative; */
+}
+
+.menu_icons:hover {
+  padding: 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 4px;
+}
+
+/* =========================================== */
+
+.menu_icons.Menu:hover::after,
+.menu_icons.Volume:hover::after,
+.menu_icons.Tasks:hover::after,
+.menu_icons.Notification:hover::after,
+.menu_icons.Setting:hover::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 99;
+}
+
+.menu_icons.Menu:hover::before,
+.menu_icons.Volume:hover::before,
+.menu_icons.Tasks:hover::before,
+.menu_icons.Notification:hover::before,
+.menu_icons.Setting:hover::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  rotate: 180deg;
+}
+
+.menu_icons.Menu:hover::after {
+  content: "Menu";
+  background: #233fce;
+}
+
+.menu_icons.Menu:hover::before {
+  border-bottom: 25px solid #233fce;
+}
+
+.menu_icons.Volume:hover::after {
+  content: "Volume";
+  background: #233fce;
+}
+
+.menu_icons.Volume:hover::before {
+  border-bottom: 25px solid #233fce;
+}
+
+.menu_icons.Tasks:hover::after {
+  content: "Tasks";
+  background: #233fce;
+}
+
+.menu_icons.Tasks:hover::before {
+  border-bottom: 25px solid #233fce;
+}
+
+.menu_icons.Notification:hover::after {
+  content: "Notification";
+  background: #233fce;
+}
+
+.menu_icons.Notification:hover::before {
+  border-bottom: 25px solid #233fce;
+}
+
+.menu_icons.Setting:hover::after {
+  content: "Setting";
+  background: #233fce;
+}
+
+.menu_icons.Setting:hover::before {
+  border-bottom: 25px solid #233fce;
+}
+
+/* =========================================== */
+
+.menu_icons.active {
+  padding: 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 4px;
+}
+
+.menu_icons span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_icons span img {
+  height: 24px;
+  width: 24px;
+}
+
+#extend {
+  border-left: 1px solid;
+}
+
+#ex-icon {
+  transform: rotate(180deg);
+  transition: all ease-in-out 0.2s;
+}
+
+/* ====================
+Voice
+======================= */
+
+.voice {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 5px;
+  background: #0e1a56;
+  border-radius: 8px;
+}
+
+.voice .text_input {
+  padding: 0 20px;
+  border-left: 1px solid #ebf5ff;
+  border-right: 1px solid #ebf5ff;
+  height: 32px;
+  margin: 0 10px;
+}
+
+.voice .text_input input {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #ebf5ff;
+  border-radius: 8px;
+  color: #ebf5ff;
+  font-size: 14px;
+  position: relative;
+  top: -3px;
+}
+
+input::placeholder {
+  color: #ebf5ff;
+}
+
+/* Popup Open */
+
+
+.popup {
+  position: absolute;
+  bottom: 17%;
+  left: 1%;
+  transform: translate(-1%, -17%);
+  margin: 10px;
+  visibility: hidden;
+}
+
+.popup.active {
+  visibility: visible;
+}
+
+.popup::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid #0E1A56;
+  rotate: 180deg;
+}
+
+.menu.popup{
+  padding: 20px;
+  background: #0e1a56;
+  border-radius: 8px;
+  bottom: -50%;
+  left: 12%;
+  width: 350px;
+}
+
+.menu.popup p{
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 6px;
+  margin: 10px 0;
+  color: #EBF5FF;
+  font-size: 14px;
+}
